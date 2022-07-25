@@ -36,7 +36,9 @@ section{
 /* timeline elements */
 @media (max-width: 767px) {
     .title {
-        padding: 20px 40px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 30px;
         text-align: left;
     }
 }

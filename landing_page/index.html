@@ -1,175 +1,329 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to #FitDevs</title>
-  <!-- Google Fonts -->
+    <meta name="description" content="#FitDevs was created to empower developers to explore, maintain, and inspire an overall goal of fitness in our collective lives.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles.css">
-  <!-- Boot Strap  -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-
-  </head>
-  <body>
-
-      <!-- Nav Bar -->
-      <!-- <nav class="navbar navbar-expand-lg navbar-dark colored-section">
-        <a class="navbar-brand" href=""> #FitDevs</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#overview-1">Our Mission</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#overview-2">Current Progress</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#overview-3">Future Events</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#overview-4">Join Us</a>
-            </li>
-          </ul>
-        </div>
-      </nav> -->
-
-      <!-- Title Page -->
-      <section class="section overview-1 colored-section">
-      <h1 class="title">Welcome to #FitDevs!</h1>
-      </section>
-      <hr>
-      <!-- Accordian Navigation -->
-        <section>
-          <div class="accordion white-section" id="accordionExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-            WHY #FitDevs exist
-          </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            #FitDevs was created because we want to empower developers to explore, maintain, and inspire fitness in our collective lives.
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingTwo">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            HOW #FitDevs plan to empower developers to EMI-fitness as a community
-          </button>
-        </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            We plan to achieve our goals by building an open and inclusive community on Twitter, Discord, and Github altogether as a collaborative effort by our community of developers. We want this to be an open sourced project with everyone contributing however they can, whether it's by a tweet, by maintaining our github together, or by inspiring others with their recipes or workout photos and achievements! All hands on deck, this is a community project! 
-            <br>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingThree">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            WHAT #FitDevs is doing to achieve our goals!
-          </button>
-        </h2>
-        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <strong>Twitter</strong> : We are publicly utilizing the #FitDevs hashtag to showcase different methods and mediums of how developers can prioritize their health, and to promote this lifestyle among techtwitter.
-            <br>
-            <strong>Discord</strong> : We created a server open to the public that is more casual and close knit for devs to hang out and keep each other accountable with our fitness journey.
-            <br>
-            <strong>Github</strong> :  We established an open sourced project for developers to build this community with us, from the ground up, and to utilize it as a source to continuously commit and document our collective achievements.
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header__content">
+            <a href="#" class="header__home">
+                <picture class="header__picture">
+                    <img src="./images/fitdevs-logo.svg" alt="#FitDevs Logo" />
+                </picture>
+            </a>
+            
+            <div class="header__socials">
+                <ul>
+                    <li><a href="https://discord.gg/rUKrTCgxa5" target="_blank" rel="noopener noreferrer"><span class="sr-only">Discord</span><i class="fa-brands fa-discord"></i></a></li>
+                    <li><a href="https://github.com/FitDevs-withKat" target="_blank" rel="noopener noreferrer"><span class="sr-only">GitHub</span><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href="https://twitter.com/fit_devs" target="_blank" rel="noopener noreferrer"><span class="sr-only">Twitter</span><i class="fa-brands fa-twitter"></i></a></li>
+                </ul>
             </div>
         </div>
-      </div>
-             <div class="accordion-item">
-        <h2 class="accordion-header" id="headingFour">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-            Join our journey!
-          </button>
-        </h2>
-        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-                 <strong>Twitter</strong> : Use our hashtag <a href="https://twitter.com/search?q=%23fitdevs&src=typed_query&f=live">#FitDevs</a> and tag <a href="https://twitter.com/katalyst_katt">@katalyst_katt</a>& your friends! Also please follow @Fit_Devs so that you will receive important announcements in the future regarding our competitions and events!
-          <br>
-          <strong>Discord</strong> : Join our <a href="https://discord.com/invite/AY8sgsAk5H">community</a>. Join a team and start building this community with us, while sharing your fitness journey in our inspiration-maintenance channels!
-          <br>
-          <strong>GitHub</strong> : Star our <a href="https://github.com/FitDevs-withKat">organization</a> & head on over to our fitness-accountability repository to add your name to our data Folder! Fork any projects you would like to contriute to. We also have a <a href="https://github.com/FitDevs-withKat/.github/discussions">discussions</a> page that welcomes inputs from our wonderful community!
-         </div>
-        </div>
-      </div>
-    </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero__content">
+                <h1 class="hero__title">#FitDevs</h1>
+                <div class="hero__subtitle heading-3">Explore. Maintain. Inspire.</div>
+            </div>
         </section>
-
-
-<hr>
-      <section class="colored-section sections " id="overview-2">
-        <div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-body">
-                    <h6 class="card-title">Community Progress</h6>
-                    <div id="content">
-                        <ul class="timeline">
-                            <li class="event" data-date="July-20-2022">
-                                <h3>#FitDevs First Official Twitter Space</h3>
-                                <p>Kat hosted our very first twitter space dedicated to #FitDevs with amazing speakers (Eddie, Sara, Deni, TechRally, Yuri, Francesco, and open mic invitations!) to discuss publicly what #FitDevs is and how we are building this community together</p>
-                            </li>
-                            <li class="event" data-date="July-20-2022">
-                                <h3>Discord Released for Public Entry</h3>
-                                <p>The official discord server was open for people to join, we are officially open for collaboration!</p>
-                            </li>
-                            <li class="event" data-date="July-22-2022">
-                                <h3>100th User in Discord Server Joined!</h3>
-                                <p>Our first mini milestone was reached with 100 users joining!</p>
-                            </li>
-                            <li class="event" data-date="July-23-2022">
-                                <h3>Live Stream to Publicly Build Github Repository</h3>
-                                <p>Today there was an exciting livestream by Eddie hosting guests of Kat and Francesco to build our GitHub Repository together on youtube! We gave a live demo on how to make your first pull request and gave a behind the scenes demonstration of how the organization is maintained on GitHub!</p>
-                            </li>
-                            <li class="event" data-date="TBD">
-                                <h3>Twitter Bot @Fit_Devs LIVE</h3>
-                                <p>Publicly built twitter bot to go live on twitter to like and retweet all users using our #FitDevs hashtag!</p>
-                            </li>
-                            <li class="event" data-date="TBD">
-                                <h3>Discord Bot LIVE</h3>
-                                <p>Publicly built discord bot to go live on discord just in time for us to start leaderboards for #FitDevs challenges!</p>
-                            </li>
-                            <li class="event" data-date="TBD">
-                                <h3>1000th User to Join #FitDevs</h3>
-                                <p>Upon 1000 users, we get T-Shirts to promote our EMI concepts :) </p>
-                            </li>
-                        </ul>
+        <section class="section narrow-content">
+            <h2 class="center">Who We Are</h2>
+            <p>#FitDevs was created because we want to empower developers to explore, maintain, and inspire fitness in our collective lives.</p>
+            <p>We plan to achieve our goals by building an open and inclusive community on Twitter, Discord, and Github altogether as a collaborative effort by our community of developers. We want this to be an open sourced project with everyone contributing however they can, whether it's by a tweet, by maintaining our github together, or by inspiring others with their recipes or workout photos and achievements! All hands on deck, this is a community project!</p>
+            <p class="center"><a href="https://fitdevs-withkat.github.io/Fitness-Accountability/" class="button" target="_blank" rel="noopener noreferrer">View Community Pledges</a></p>
+        </section>
+        <section class="timeline">
+            <div class="timeline__content">
+                <h2 class="center">Community Progress</h2>
+                <div class="story">
+                    <div class="story__content">
+                        <span class="story__title">#FitDevs First Official Twitter Space</span>
+                        <p>July-20-2022</p>
+                        <p class="story__blurb">Kat hosted our very first twitter space dedicated to #FitDevs with amazing speakers (Eddie, Sara, Deni, TechRally, Yuri, Francesco, and open mic invitations!) to discuss publicly what #FitDevs is and how we are building this community together</p>
+                    </div>
+                    <div class="story__icon">
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+                </div>
+                <div class="story">
+                    <div class="story__content">
+                        <span class="story__title">Discord Released for Public Entry</span>
+                        <p>July-20-2022</p>
+                        <p class="story__blurb">The official discord server was open for people to join, we are officially open for collaboration!</p>
+                    </div>
+                    <div class="story__icon">
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+                </div>
+                <div class="story">
+                    <div class="story__content">
+                        <span class="story__title">100th User in Discord Server Joined!</span>
+                        <p>July-22-2022</p>
+                        <p class="story__blurb">Our first mini milestone was reached with 100 users joining!</p>
+                    </div>
+                    <div class="story__icon">
+                        <i class="fa-solid fa-person"></i>
+                    </div>
+                </div>
+                <div class="story">
+                    <div class="story__content">
+                        <span class="story__title">Live Stream to Publicly Build Github Repository</span>
+                        <p>July-23-2022</p>
+                        <p class="story__blurb">Today there was an exciting livestream by Eddie hosting guests of Kat and Francesco to build our GitHub Repository together on youtube! We gave a live demo on how to make your first pull request and gave a behind the scenes demonstration of how the organization is maintained on GitHub!</p>
+                    </div>
+                    <div class="story__icon">
+                        <i class="fa-solid fa-video"></i>
+                    </div>
+                </div>
+                <div class="story">
+                    <div class="story__content">
+                        <span class="story__title">Twitter Bot @Fit_Devs LIVE</span>
+                        <p>TBD</p>
+                        <p class="story__blurb">Publicly built twitter bot to go live on twitter to like and retweet all users using our #FitDevs hashtag!</p>
+                    </div>
+                    <div class="story__icon">
+                        <i class="fa-solid fa-calendar"></i>
+                    </div>
+                </div>
+                <div class="story">
+                    <div class="story__content">
+                        <span class="story__title">Discord Bot LIVE</span>
+                        <p>TBD</p>
+                        <p class="story__blurb">Publicly built discord bot to go live on discord just in time for us to start leaderboards for #FitDevs challenges!</p>
+                    </div>
+                    <div class="story__icon">
+                        <i class="fa-solid fa-calendar"></i>
+                    </div>
+                </div>
+                <div class="story">
+                    <div class="story__content">
+                        <span class="story__title">1000th User to Join #FitDevs</span>
+                        <p>TBD</p>
+                        <p class="story__blurb">Upon 1000 users, we get T-Shirts to promote our EMI concepts :)</p>
+                    </div>
+                    <div class="story__icon">
+                        <i class="fa-solid fa-calendar"></i>
                     </div>
                 </div>
             </div>
+        </section>
+        <section class="cta">
+            
+               
+                <div class="cta__content">
+                    <h3 class="cta__title center">Join Our Community</h3>
+                    <p class="cta__subtitle subtitle">Over 300+ members have joined!</p>
+                    <div class="cta__socials">
+                        <ul>
+                            <li><a href="https://discord.gg/rUKrTCgxa5" target="_blank" rel="noopener noreferrer"><span class="sr-only">Discord</span><i class="fa-brands fa-discord"></i></a></li>
+                            <li><a href="https://github.com/FitDevs-withKat" target="_blank" rel="noopener noreferrer"><span class="sr-only">GitHub</span><i class="fa-brands fa-github"></i></a></li>
+                            <li><a href="https://twitter.com/fit_devs" target="_blank" rel="noopener noreferrer"><span class="sr-only">Twitter</span><i class="fa-brands fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+          
+        </section>
+        <section class="section">
+            <div class="icon-heading">
+                <div class="icon-heading__icon">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+                <h2>Upcoming Events</h2>
+            </div>
+            <div class="events">
+                <div class="events__content">
+                    <article class="event">
+                        <div class="event__featured">
+                            <picture class="event__picture">
+                                <img src="./images/city-overlook.jpg" alt="#" />
+                            </picture>
+                            <div class="event__pill">Discord</div>
+                        </div>
+                        <div class="event__content">
+                            <h3 class="event__title heading-5"><a href="#">Discord Hangout - Week In Review</a></h3>
+                            <div class="event__details">
+                                <div class="event__month">
+                                    <span class="event__emph">July</span>
+                                    <span class="event__emph">27</span>
+                                </div>
+                                <div class="event__day">
+                                    <div class="event__daytime">
+                                        <span class="event__emph">Wednesday</span>
+                                        <span class="event__time">09:30am - 01:00pm</span>
+                                    </div>
+                                    <div class="event__icon">
+                                        <i class="fa-solid fa-calendar-check"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="event__subtitle">Event Details</span>
+                            <p class="event__description">Come hangout and discuss your week with us. Did you accomplush your goals or do some amazing stuff? tell us about them!</p>    
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="event__cta">Go to Event <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </article>
+                    <article class="event">
+                        <div class="event__featured">
+                            <picture class="event__picture">
+                                <img src="./images/pexels-photo-812958-water.png" alt="#" />
+                            </picture>
+                            <div class="event__pill">Twitch</div>
+                        </div>
+                        <div class="event__content">
+                            <h3 class="event__title heading-5"><a href="#">Twitch Coding Stream with Kat - Building in Public</a></h3>
+                            <div class="event__details">
+                                <div class="event__month">
+                                    <span class="event__emph">Aug</span>
+                                    <span class="event__emph">4</span>
+                                </div>
+                                <div class="event__day">
+                                    <div class="event__daytime">
+                                        <span class="event__emph">Thursday</span>
+                                        <span class="event__time">02:30pm - 05:00pm</span>
+                                    </div>
+                                    <div class="event__icon">
+                                        <i class="fa-solid fa-calendar-check"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="event__subtitle">Event Details</span>
+                            <p class="event__description">Come hangout with me as I work through my day. Learn various technologies like NodeJS and Python.</p>    
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="event__cta">Go to Event <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </article>
+                    <article class="event">
+                        <div class="event__featured">
+                            <picture class="event__picture">
+                                <img src="./images/forest-trees-perspective-bright-957024 1.png" alt="#" />
+                            </picture>
+                            <div class="event__pill">Twitter Space</div>
+                        </div>
+                        <div class="event__content">
+                            <h3 class="event__title heading-5"><a href="#">Twitter Space - Yoga for Stress Management</a></h3>
+                            <div class="event__details">
+                                <div class="event__month">
+                                    <span class="event__emph">Aug</span>
+                                    <span class="event__emph">16</span>
+                                </div>
+                                <div class="event__day">
+                                    <div class="event__daytime">
+                                        <span class="event__emph">Tuesday</span>
+                                        <span class="event__time">11:30am - 01:45pm</span>
+                                    </div>
+                                    <div class="event__icon">
+                                        <i class="fa-solid fa-calendar-check"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="event__subtitle">Event Details</span>
+                            <p class="event__description">Discuss your top yoga tips & tricks with like minded individuals.</p>    
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="event__cta">Go to Event <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="icon-heading">
+                <div class="icon-heading__icon">
+                    <i class="fa-solid fa-quote-right"></i>
+                </div>
+                <h2>Testimonials</h2>
+            </div>
+            <section class="testimonials">
+                <div class="testimonials__content">
+                  <div class="testimonials__statemenet a">
+                    <div class="testimonials__header">
+                      <picture class="testimonials__pfp">
+                        <img src="./images/pexels-photo-3807852.jpg" alt="Stephanie Beatriz" />
+                      </picture>
+                      <div class="testimonials__meta">
+                        <h3 class="testimonials__author heading-5">Stephanie Beatriz</h3>
+                        <span class="testimonials__subtitle">Health Specialist / PHP Developer</span>
+                      </div>
+                    </div>
+                    <p class="testimonials__quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+                  </div>
+                  <div class="testimonials__statemenet b">
+                    <div class="testimonials__header">
+                      <picture class="testimonials__pfp">
+                        <img src="./images/pexels-photo-1722198.jpg" alt="Terry Crews" />
+                      </picture>
+                      <div class="testimonials__meta">
+                        <h3 class="testimonials__author heading-5">Terry Crews</h3>
+                        <span class="testimonials__subtitle">Web Developer</span>
+                      </div>
+                    </div>
+                    <p class="testimonials__quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+                    <p class="testimonials__quote">quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                  <div class="testimonials__statemenet c">
+                    <div class="testimonials__header">
+                      <picture class="testimonials__pfp">
+                        <img src="./images/pexels-photo-3777948.jpg" alt="Andy Samberg" />
+                      </picture>
+                      <div class="testimonials__meta">
+                        <h3 class="testimonials__author heading-5">Andy Samberg</h3>
+                        <span class="testimonials__subtitle">Public Figure</span>
+                      </div>
+                    </div>
+                    <p class="testimonials__quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+                  </div>
+                  <div class="testimonials__statemenet d">
+                    <div class="testimonials__header">
+                      <picture class="testimonials__pfp">
+                        <img src="./images/pexels-photo-3786525.jpg" alt="Chelsea Peretti" />
+                      </picture>
+                      <div class="testimonials__meta">
+                        <h3 class="testimonials__author heading-5">Chelsea Peretti</h3>
+                        <span class="testimonials__subtitle">Developer Advocate</span>
+                      </div>
+                    </div>
+                    <p class="testimonials__quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+                  </div>
+                </div>
+            </section>
+        </section>
+
+        <section class="twitter section">
+            <div class="icon-heading">
+                <div class="icon-heading__icon">
+                    <i class="fa-solid fa-quote-right"></i>
+                </div>
+                <h2>See What #FitDevs are Tweeting!</h2>
+            </div>
+            <div class="twitter__content">
+                <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Good morning <a href="https://twitter.com/hashtag/FitDevs?src=hash&amp;ref_src=twsrc%5Etfw">#FitDevs</a>! I walk my dogs daily for both their &amp; my benefits: <br><br>1) warms up my body 🧘‍♀️ <br>2) we say hi to all our neighbors (humans and dogs alike) 👯‍♀️<br>3) I catch up on texts/calls w my family members 🏡<br>4) pups get their daily enrichment 🧠<br><br>Have a lovely weekend, EMI💕 <a href="https://t.co/zfBcD0Vn1a">pic.twitter.com/zfBcD0Vn1a</a></p>&mdash; katalyst kat (@katalyst_katt) <a href="https://twitter.com/katalyst_katt/status/1553439468673085440?ref_src=twsrc%5Etfw">July 30, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <blockquote class="twitter-tweet"><p lang="en" dir="ltr">When you miss your laptop but <a href="https://twitter.com/SaraJaoude?ref_src=twsrc%5Etfw">@SaraJaoude</a> gives you a reality check 😂 <a href="https://twitter.com/hashtag/FitDevs?src=hash&amp;ref_src=twsrc%5Etfw">#FitDevs</a> <a href="https://t.co/4VUUYC8gAh">pic.twitter.com/4VUUYC8gAh</a></p>&mdash; Eddie Jaoude | GitHub Star (@eddiejaoude) <a href="https://twitter.com/eddiejaoude/status/1552862492048740352?ref_src=twsrc%5Etfw">July 29, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <blockquote class="twitter-tweet"><p lang="en" dir="ltr">As a developer, how do you like to stay fit?<br><br>Me:<br>- Not overeating<br>- Not too much sugar<br>- Not too much stress (it leads to over eating)<br>- Regular walks &amp; workouts<a href="https://twitter.com/hashtag/fitdevs?src=hash&amp;ref_src=twsrc%5Etfw">#fitdevs</a> <a href="https://t.co/MDCagjrXvM">pic.twitter.com/MDCagjrXvM</a></p>&mdash; YK aka CS Dojo 📺🐦 (@ykdojo) <a href="https://twitter.com/ykdojo/status/1551596889887256577?ref_src=twsrc%5Etfw">July 25, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <!-- <a class="twitter-timeline" href="https://twitter.com/katalyst_katt?ref_src=twsrc%5Etfw">Tweets by katalyst_katt</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__copyright">
+                <p>© Copyright 2022</p>
+            </div>
+            <div class="footer__socials">
+                <ul>
+                    <li><a href="https://discord.gg/rUKrTCgxa5" target="_blank" rel="noopener noreferrer"><span class="sr-only">Discord</span><i class="fa-brands fa-discord"></i></a></li>
+                    <li><a href="https://github.com/FitDevs-withKat" target="_blank" rel="noopener noreferrer"><span class="sr-only">GitHub</span><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href="https://twitter.com/fit_devs" target="_blank" rel="noopener noreferrer"><span class="sr-only">Twitter</span><i class="fa-brands fa-twitter"></i></a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-</div>
-<hr>
-
-      </section>
-
-      <section class="white-section sections " id="overview-3">
-        <h2>Upcoming Events</h2>
-        <p>Building the Github Repository LiveStream: <a href="https://t.co/gayLeza4mu"> Watch it on 7/24/22 8:30AM PST</a></p>
-        <p>Weekly Twitter Space on Wednesdays 4PM BST: Link to be Updated! </p>
-      </section>
-      <hr>
-
-      <section class="colored-section sections" id="overview-4">
-        <h2>Join us!</h2>
-        <a href="https://twitter.com/search?q=%23fitdevs&src=typed_query&f=live" ><button type="button"  class="btn btn-light">Check out #FitDevs!</button></a>
-        <a href="https://discord.com/invite/AY8sgsAk5H" ><button type="button" class="btn btn-light">Join our Discord!</button></a>
-        <a href="https://github.com/FitDevs-withKat"><button type="button"  class="btn btn-light">Build with Us!</button></a>
-
-      </section>
-  </body>
+    </footer>
+</body>
 </html>

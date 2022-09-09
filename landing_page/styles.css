@@ -82,21 +82,44 @@ p {
 }
 
 .button {
+    font-family: "Nunito", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+    line-height: 22px;
+
     display: inline-block;
     margin: 1rem 0;
     padding: 0.8rem 2rem;
+    width: max-content;
 
+    font-weight: bold;
     text-decoration: none;
     border-radius: 0.5rem;
-    border: 2px solid #202A44;
-    background-color: #202A44;
-    color: #fff;
 
     transition: color 200ms ease-in-out, background 200ms ease-in-out;
 }
-.button:hover, .button:focus {
+.button--blue {
+    border: 2px solid #202A44;
+    background-color: #202A44;
+    color: #fff;
+}
+.button--blue:hover,
+.button--blue:focus {
     background-color: #fff;
     color: #202A44;
+}
+
+.button--yellow {
+    border: 2px solid #FBCA4D;
+    background-color: #FBCA4D;
+    color: #000;
+}
+
+.button--yellow:hover, 
+.button--yellow:focus {
+    background-color: #fff;
+    color: #000;
 }
 
 /********************
@@ -162,17 +185,15 @@ p {
 /********************
         Hero
 *********************/
-.hero {
+/* old .hero {
     margin: 0 auto;
     max-width: 1300px;
     padding: 0 1rem;
     border-radius: 8px;
 }
 
-.hero__content {
+old .hero__content {
     background-image: url('./images/hero-orange.jpg');
-    /* background-size: 40px;
-    background-position: -15px; */
 
     display: flex;
     flex-direction: column;
@@ -188,18 +209,150 @@ p {
     border-radius: 8px;
 }
 
-.hero__title {
+old .hero__title {
     display: inline-block;
     font-weight: bold;
     color: #000;
     margin: 0;
 }
 
-.hero__subtitle {
+old .hero__subtitle {
     display: inline-block;
     text-align: center;
     color: #000;
     margin: 0;
+} */
+.hero {
+    padding: 0 1rem;
+}
+
+.hero__title {
+    display: inline-block;
+    
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 700;
+    font-size: 61.04px;
+    letter-spacing: 0.25px;
+    line-height: 76px;
+    
+    margin: 1rem 0;
+}
+.hero__blurb {
+    display: inline-block;
+    
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+    line-height: 31px;
+    
+    margin: 1rem 0;
+}
+
+.hero__content {
+    display: inline-block;
+    margin: 80px 0;
+}
+
+.hero__frame {
+    position: relative;
+    background-image: url('images/svg-frame.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    width: 100%;
+    max-width: 460px;
+    aspect-ratio: 320/299;
+}
+.hero__image {
+    display: block;
+    
+    width: calc(100% - 30%);
+    height: calc(100% - 20%);
+    aspect-ratio: 232/241;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 50% 50% 0 0;
+    box-shadow: 0px 4px 13px rgb(0 0 0 / 65%);
+    object-fit: cover;
+}
+
+@media screen and (min-width: 768px) {
+    .hero {
+        max-width: 720px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .hero {
+        display: grid;
+        grid-template-columns: 660px 460px;
+        gap: calc(100% - 660px - 460px - 32px);
+        
+        max-width: 1300px;
+        margin: 0 auto;
+
+        height: 70vh;
+        place-content: center;
+    }
+    .hero__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: unset;
+    }
+}
+/********************
+        FAQ
+*********************/
+.faq {
+    max-width: 1300px;
+    margin: 0 auto;
+
+    padding: 2rem 1rem;
+}
+.faq .bold {
+    font-weight: bold;
+}
+.faq__header h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.faq__header {
+    padding: 1rem;
+    border-radius: 8px 8px 0 0;
+}
+.faq__question:nth-child(2) .faq__header {
+    background-color: #F2934E;
+}
+.faq__question:nth-child(3) .faq__header {
+    background-color: #F49E60;
+}
+.faq__question:nth-child(4) .faq__header {
+    background-color: #F5A971;
+}
+.faq__question:nth-child(5) .faq__header {
+    background-color: #F6B484;
+}
+.faq__header h3 {
+    margin: 0;
+}
+
+.faq__answer {
+    padding: 1rem;
+    background-color: #ffefe3;
+}
+.faq__answer p:first-child {
+    margin-top: 0;
+}
+.faq__answer p:last-child {
+    margin-bottom: 0;
 }
 
 /********************
